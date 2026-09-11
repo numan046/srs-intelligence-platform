@@ -1522,49 +1522,49 @@ CUSTOM_CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-    /* Professional Enterprise Palette */
-    --bg-deep: #0f172a;
-    --bg-primary: #1e293b;
-    --bg-secondary: #334155;
-    --bg-tertiary: #475569;
-    --bg-card: rgba(30, 41, 59, 0.7);
-    --bg-card-hover: rgba(51, 65, 85, 0.8);
-    --bg-elevated: rgba(30, 41, 59, 0.95);
+    /* Professional Light-Dark Palette */
+    --bg-deep: #1a1f2e;
+    --bg-primary: #242b3d;
+    --bg-secondary: #2e3650;
+    --bg-tertiary: #3d4663;
+    --bg-card: rgba(46, 54, 80, 0.6);
+    --bg-card-hover: rgba(61, 70, 99, 0.7);
+    --bg-elevated: rgba(46, 54, 80, 0.9);
     
-    /* Professional Accents - Blue & Teal */
-    --accent-primary: #0ea5e9;
-    --accent-secondary: #06b6d4;
-    --accent-tertiary: #0284c7;
-    --accent-soft: rgba(14, 165, 233, 0.1);
-    --accent-gradient: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
-    --accent-gradient-reverse: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
-    --accent-gradient-subtle: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(6, 182, 212, 0.04) 100%);
-    --accent-glow: 0 0 20px rgba(14, 165, 233, 0.3);
+    /* Professional Accents - Soft Blue */
+    --accent-primary: #60a5fa;
+    --accent-secondary: #3b82f6;
+    --accent-tertiary: #2563eb;
+    --accent-soft: rgba(96, 165, 250, 0.15);
+    --accent-gradient: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    --accent-gradient-reverse: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    --accent-gradient-subtle: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+    --accent-glow: 0 0 20px rgba(96, 165, 250, 0.3);
     
     /* Success Accent - Green */
-    --success-accent: #10b981;
-    --success-soft: rgba(16, 185, 129, 0.1);
+    --success-accent: #34d399;
+    --success-soft: rgba(52, 211, 153, 0.15);
     
     /* Borders */
-    --border-primary: rgba(148, 163, 184, 0.2);
-    --border-secondary: rgba(148, 163, 184, 0.1);
-    --border-accent: rgba(14, 165, 233, 0.3);
+    --border-primary: rgba(148, 163, 184, 0.25);
+    --border-secondary: rgba(148, 163, 184, 0.15);
+    --border-accent: rgba(96, 165, 250, 0.4);
     
     /* Typography */
-    --text-primary: #f1f5f9;
-    --text-secondary: #cbd5e1;
-    --text-tertiary: #94a3b8;
-    --text-muted: #64748b;
+    --text-primary: #f8fafc;
+    --text-secondary: #e2e8f0;
+    --text-tertiary: #cbd5e1;
+    --text-muted: #94a3b8;
     
     /* Status Colors */
-    --success: #10b981;
-    --success-soft: rgba(16, 185, 129, 0.1);
-    --warning: #f59e0b;
-    --warning-soft: rgba(245, 158, 11, 0.1);
-    --danger: #ef4444;
-    --danger-soft: rgba(239, 68, 68, 0.1);
-    --info: #0ea5e9;
-    --info-soft: rgba(14, 165, 233, 0.1);
+    --success: #34d399;
+    --success-soft: rgba(52, 211, 153, 0.15);
+    --warning: #fbbf24;
+    --warning-soft: rgba(251, 191, 36, 0.15);
+    --danger: #f87171;
+    --danger-soft: rgba(248, 113, 113, 0.15);
+    --info: #60a5fa;
+    --info-soft: rgba(96, 165, 250, 0.15);
     
     /* Spacing & Radius */
     --radius-xs: 6px;
@@ -1575,12 +1575,12 @@ CUSTOM_CSS = """
     --radius-full: 9999px;
     
     /* Professional Shadows */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
-    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.6);
-    --shadow-accent: 0 4px 12px rgba(14, 165, 233, 0.2);
-    --shadow-glow: 0 0 20px rgba(14, 165, 233, 0.2);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.5);
+    --shadow-accent: 0 4px 12px rgba(96, 165, 250, 0.25);
+    --shadow-glow: 0 0 20px rgba(96, 165, 250, 0.25);
     
     /* Transitions */
     --transition-fast: 0.15s ease;
@@ -1616,9 +1616,9 @@ html, body, .stApp {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 30%, rgba(14, 165, 233, 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(2, 132, 199, 0.04) 0%, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(96, 165, 250, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.04) 0%, transparent 50%);
     animation: meshGradient 20s ease infinite;
     z-index: 0;
     pointer-events: none;
