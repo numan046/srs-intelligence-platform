@@ -1522,70 +1522,70 @@ CUSTOM_CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-    /* Premium Deep Space Palette */
-    --bg-deep: #0a0e27;
-    --bg-primary: #111638;
-    --bg-secondary: #1a1f4e;
-    --bg-tertiary: #252b6e;
-    --bg-card: rgba(26, 31, 78, 0.4);
-    --bg-card-hover: rgba(37, 43, 110, 0.6);
-    --bg-elevated: rgba(26, 31, 78, 0.8);
+    /* Professional Enterprise Palette */
+    --bg-deep: #0f172a;
+    --bg-primary: #1e293b;
+    --bg-secondary: #334155;
+    --bg-tertiary: #475569;
+    --bg-card: rgba(30, 41, 59, 0.7);
+    --bg-card-hover: rgba(51, 65, 85, 0.8);
+    --bg-elevated: rgba(30, 41, 59, 0.95);
     
-    /* Premium Accents - Cyan & Purple */
-    --accent-primary: #06b6d4;
-    --accent-secondary: #8b5cf6;
-    --accent-tertiary: #3b82f6;
-    --accent-soft: rgba(6, 182, 212, 0.15);
-    --accent-gradient: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #3b82f6 100%);
-    --accent-gradient-reverse: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
-    --accent-gradient-subtle: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
-    --accent-glow: 0 0 20px rgba(6, 182, 212, 0.5);
+    /* Professional Accents - Blue & Teal */
+    --accent-primary: #0ea5e9;
+    --accent-secondary: #06b6d4;
+    --accent-tertiary: #0284c7;
+    --accent-soft: rgba(14, 165, 233, 0.1);
+    --accent-gradient: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+    --accent-gradient-reverse: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
+    --accent-gradient-subtle: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(6, 182, 212, 0.04) 100%);
+    --accent-glow: 0 0 20px rgba(14, 165, 233, 0.3);
     
-    /* Success Accent - Emerald */
+    /* Success Accent - Green */
     --success-accent: #10b981;
-    --success-soft: rgba(16, 185, 129, 0.15);
+    --success-soft: rgba(16, 185, 129, 0.1);
     
     /* Borders */
-    --border-primary: rgba(139, 92, 246, 0.2);
-    --border-secondary: rgba(6, 182, 212, 0.1);
-    --border-accent: rgba(6, 182, 212, 0.4);
+    --border-primary: rgba(148, 163, 184, 0.2);
+    --border-secondary: rgba(148, 163, 184, 0.1);
+    --border-accent: rgba(14, 165, 233, 0.3);
     
     /* Typography */
-    --text-primary: #f8fafc;
+    --text-primary: #f1f5f9;
     --text-secondary: #cbd5e1;
     --text-tertiary: #94a3b8;
     --text-muted: #64748b;
     
     /* Status Colors */
     --success: #10b981;
-    --success-soft: rgba(16, 185, 129, 0.15);
+    --success-soft: rgba(16, 185, 129, 0.1);
     --warning: #f59e0b;
-    --warning-soft: rgba(245, 158, 11, 0.15);
+    --warning-soft: rgba(245, 158, 11, 0.1);
     --danger: #ef4444;
-    --danger-soft: rgba(239, 68, 68, 0.15);
-    --info: #06b6d4;
-    --info-soft: rgba(6, 182, 212, 0.15);
+    --danger-soft: rgba(239, 68, 68, 0.1);
+    --info: #0ea5e9;
+    --info-soft: rgba(14, 165, 233, 0.1);
     
     /* Spacing & Radius */
     --radius-xs: 6px;
-    --radius-sm: 10px;
-    --radius-md: 14px;
-    --radius-lg: 20px;
-    --radius-xl: 28px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
     --radius-full: 9999px;
     
-    /* Premium Shadows */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.6);
-    --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.7);
-    --shadow-accent: 0 8px 24px rgba(6, 182, 212, 0.3);
-    --shadow-glow: 0 0 30px rgba(139, 92, 246, 0.4);
+    /* Professional Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.6);
+    --shadow-accent: 0 4px 12px rgba(14, 165, 233, 0.2);
+    --shadow-glow: 0 0 20px rgba(14, 165, 233, 0.2);
     
     /* Transitions */
-    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: 0.15s ease;
+    --transition-smooth: 0.25s ease;
+    --transition-slow: 0.4s ease;
 }
 
 /* Base Reset & Typography */
@@ -1616,9 +1616,9 @@ html, body, .stApp {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 30%, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(14, 165, 233, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(2, 132, 199, 0.04) 0%, transparent 50%);
     animation: meshGradient 20s ease infinite;
     z-index: 0;
     pointer-events: none;
