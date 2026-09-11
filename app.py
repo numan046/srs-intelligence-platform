@@ -1614,7 +1614,7 @@ html, body, .stApp {
         radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
         radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
     animation: meshGradient 20s ease infinite;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
