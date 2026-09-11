@@ -1519,75 +1519,75 @@ def generate_team_roles(analysis):
 
 CUSTOM_CSS = """
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-    /* Luxury Color Palette */
-    --bg-deep: #050505;
-    --bg-primary: #0a0a0a;
-    --bg-secondary: #111111;
-    --bg-tertiary: #1a1a1a;
-    --bg-card: rgba(255, 255, 255, 0.03);
-    --bg-card-hover: rgba(255, 255, 255, 0.05);
-    --bg-elevated: rgba(20, 20, 20, 0.95);
+    /* Modern Professional Color Palette */
+    --bg-deep: #0f1117;
+    --bg-primary: #161922;
+    --bg-secondary: #1e2130;
+    --bg-tertiary: #252a3a;
+    --bg-card: rgba(30, 33, 48, 0.6);
+    --bg-card-hover: rgba(37, 42, 58, 0.8);
+    --bg-elevated: rgba(30, 33, 48, 0.95);
     
-    /* Luxury Accents - Gold & Amber */
-    --accent-primary: #d4af37;
-    --accent-secondary: #f4d03f;
-    --accent-tertiary: #c9a227;
-    --accent-soft: rgba(212, 175, 55, 0.15);
-    --accent-gradient: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #c9a227 100%);
-    --accent-gradient-subtle: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(244, 208, 63, 0.05) 100%);
+    /* Primary Accent - Modern Blue */
+    --accent-primary: #3b82f6;
+    --accent-secondary: #60a5fa;
+    --accent-tertiary: #2563eb;
+    --accent-soft: rgba(59, 130, 246, 0.1);
+    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    --accent-gradient-subtle: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(96, 165, 250, 0.04) 100%);
     
-    /* Secondary Accent - Deep Blue */
-    --blue-accent: #1e3a5f;
-    --blue-soft: rgba(30, 58, 95, 0.3);
+    /* Success Accent - Green */
+    --success-accent: #10b981;
+    --success-soft: rgba(16, 185, 129, 0.1);
     
     /* Borders */
     --border-primary: rgba(255, 255, 255, 0.08);
     --border-secondary: rgba(255, 255, 255, 0.04);
-    --border-accent: rgba(212, 175, 55, 0.3);
+    --border-accent: rgba(59, 130, 246, 0.3);
     
     /* Typography */
-    --text-primary: #f5f5f5;
-    --text-secondary: #a0a0a0;
-    --text-tertiary: #666666;
-    --text-muted: #444444;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-tertiary: #64748b;
+    --text-muted: #475569;
     
     /* Status Colors */
-    --success: #2ecc71;
-    --success-soft: rgba(46, 204, 113, 0.1);
-    --warning: #f39c12;
-    --warning-soft: rgba(243, 156, 18, 0.1);
-    --danger: #e74c3c;
-    --danger-soft: rgba(231, 76, 60, 0.1);
-    --info: #3498db;
-    --info-soft: rgba(52, 152, 219, 0.1);
+    --success: #10b981;
+    --success-soft: rgba(16, 185, 129, 0.1);
+    --warning: #f59e0b;
+    --warning-soft: rgba(245, 158, 11, 0.1);
+    --danger: #ef4444;
+    --danger-soft: rgba(239, 68, 68, 0.1);
+    --info: #3b82f6;
+    --info-soft: rgba(59, 130, 246, 0.1);
     
     /* Spacing & Radius */
     --radius-xs: 4px;
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 16px;
-    --radius-xl: 24px;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
     --radius-full: 9999px;
     
     /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-    --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
-    --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.15);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.6);
+    --shadow-accent: 0 4px 12px rgba(59, 130, 246, 0.15);
     
     /* Transitions */
-    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: 0.15s ease;
+    --transition-smooth: 0.25s ease;
+    --transition-slow: 0.4s ease;
 }
 
 /* Base Reset & Typography */
 * {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -1597,30 +1597,16 @@ html, body, .stApp {
     color: var(--text-primary);
 }
 
-/* Subtle noise texture overlay */
-.stApp::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.015;
-    z-index: 0;
-    pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-}
-
 /* Hide Streamlit chrome */
 #MainMenu, footer, header[data-testid="stHeader"] {
     background: transparent;
 }
 
 /* ================================================================
-   SIDEBAR - Premium Navigation
+   SIDEBAR - Clean Modern Navigation
    ================================================================ */
 section[data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #080808 0%, #0c0c0c 100%);
+    background: var(--bg-primary);
     border-right: 1px solid var(--border-primary);
 }
 
@@ -1632,17 +1618,16 @@ section[data-testid="stSidebar"] > div {
     position: sticky;
     top: 0;
     z-index: 10;
-    padding: 1.5rem 1.2rem;
+    padding: 1rem 1rem;
     margin-bottom: 0;
     border-bottom: 1px solid var(--border-primary);
-    background: linear-gradient(180deg, rgba(212, 175, 55, 0.03) 0%, transparent 100%);
+    background: var(--accent-gradient-subtle);
 }
 
 .sidebar-brand .brand-title {
-    font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 1.3rem;
-    letter-spacing: -0.02em;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     background-clip: text;
@@ -1652,9 +1637,9 @@ section[data-testid="stSidebar"] > div {
 
 .sidebar-brand .brand-sub {
     color: var(--text-tertiary);
-    font-size: 0.7rem;
-    margin-top: 0.4rem;
-    letter-spacing: 0.08em;
+    font-size: 0.65rem;
+    margin-top: 0.3rem;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     font-weight: 500;
 }
@@ -1663,9 +1648,9 @@ section[data-testid="stSidebar"] > div {
     background: var(--bg-card);
     border: 1px solid var(--border-primary);
     border-radius: var(--radius-md);
-    padding: 1rem 1.2rem;
-    margin: 1rem 0;
-    backdrop-filter: blur(20px);
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    backdrop-filter: blur(10px);
     transition: all var(--transition-smooth);
 }
 
@@ -1676,24 +1661,24 @@ section[data-testid="stSidebar"] > div {
 
 .user-chip .u-name {
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--text-primary);
     letter-spacing: -0.01em;
 }
 
 .user-chip .u-email {
     color: var(--text-tertiary);
-    font-size: 0.75rem;
-    margin-top: 0.2rem;
+    font-size: 0.7rem;
+    margin-top: 0.15rem;
 }
 
 .sidebar-section-label {
     color: var(--text-tertiary);
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     font-weight: 600;
-    margin: 1.2rem 0 0.5rem 0.2rem;
+    margin: 0.8rem 0 0.4rem 0.2rem;
     padding-left: 0.5rem;
     border-left: 2px solid var(--border-secondary);
 }
@@ -1706,9 +1691,9 @@ section[data-testid="stSidebar"] div.stButton > button {
     border: 1px solid transparent !important;
     box-shadow: none !important;
     font-weight: 500 !important;
-    font-size: 0.88rem !important;
-    padding: 0.65rem 1rem !important;
-    margin: 0.15rem 0 !important;
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem !important;
+    margin: 0.1rem 0 !important;
     border-radius: var(--radius-sm) !important;
     transition: all var(--transition-fast) !important;
     letter-spacing: -0.01em;
@@ -1730,39 +1715,38 @@ section[data-testid="stSidebar"] div.stButton > button:active {
    ================================================================ */
 h1, h2, h3, h4, h5, h6 {
     color: var(--text-primary) !important;
-    font-family: 'Playfair Display', serif !important;
     font-weight: 600 !important;
     letter-spacing: -0.02em;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
-h1 { font-size: 2rem !important; }
-h2 { font-size: 1.6rem !important; }
-h3 { font-size: 1.3rem !important; }
+h1 { font-size: 1.75rem !important; }
+h2 { font-size: 1.5rem !important; }
+h3 { font-size: 1.25rem !important; }
 h4 { font-size: 1.1rem !important; }
 
 p, span, label, .stMarkdown {
     color: var(--text-primary);
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 .stCaption, [data-testid="stCaptionContainer"] {
     color: var(--text-tertiary) !important;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
 }
 
 /* ================================================================
-   HERO SECTION - Premium Banner
+   HERO SECTION - Clean Modern Banner
    ================================================================ */
 .app-hero {
     position: relative;
-    padding: 2.5rem 2.5rem;
+    padding: 1.5rem 1.5rem;
     border-radius: var(--radius-lg);
     background: var(--accent-gradient-subtle);
     border: 1px solid var(--border-accent);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     overflow: hidden;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
 }
 
 .app-hero::before {
@@ -1770,10 +1754,10 @@ p, span, label, .stMarkdown {
     position: absolute;
     top: -50%;
     right: -20%;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
     filter: blur(40px);
 }
 
@@ -1790,42 +1774,42 @@ p, span, label, .stMarkdown {
 
 .app-hero h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.75rem;
     position: relative;
     z-index: 1;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
 }
 
 .app-hero p {
     color: var(--text-secondary);
-    margin: 0.6rem 0 0 0;
+    margin: 0.4rem 0 0 0;
     position: relative;
     z-index: 1;
-    font-size: 1rem;
+    font-size: 0.95rem;
     max-width: 600px;
 }
 
 /* ================================================================
-   CARDS - Premium Glassmorphism
+   CARDS - Modern Clean Design
    ================================================================ */
 .metric-card, .content-card, .glass-card, .history-item, .module-card {
     background: var(--bg-card);
     border: 1px solid var(--border-primary);
     border-radius: var(--radius-md);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     transition: all var(--transition-smooth);
 }
 
 .metric-card:hover, .content-card:hover, .glass-card:hover, .module-card:hover {
     border-color: var(--border-accent);
     background: var(--bg-card-hover);
-    box-shadow: var(--shadow-gold);
-    transform: translateY(-2px);
+    box-shadow: var(--shadow-accent);
+    transform: translateY(-1px);
 }
 
 .metric-card {
-    padding: 1.5rem;
+    padding: 1rem;
     text-align: left;
     position: relative;
     overflow: hidden;
@@ -1848,32 +1832,31 @@ p, span, label, .stMarkdown {
 }
 
 .metric-card .metric-icon {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     opacity: 0.9;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .metric-card .metric-label {
     color: var(--text-tertiary);
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-top: 0.5rem;
+    letter-spacing: 0.08em;
+    margin-top: 0.4rem;
     font-weight: 600;
 }
 
 .metric-card .metric-value {
     color: var(--text-primary);
-    font-size: 2.2rem;
+    font-size: 1.75rem;
     font-weight: 700;
-    font-family: 'Playfair Display', serif;
-    margin-top: 0.3rem;
+    margin-top: 0.2rem;
     letter-spacing: -0.02em;
 }
 
 .metric-card .metric-delta {
-    font-size: 0.75rem;
-    margin-top: 0.4rem;
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
     font-weight: 500;
 }
 
@@ -1881,36 +1864,34 @@ p, span, label, .stMarkdown {
 .metric-delta.down { color: var(--danger); }
 
 .content-card {
-    padding: 1.5rem 1.8rem;
-    margin-bottom: 1.2rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
 }
 
 .content-card h4 {
     margin-top: 0 !important;
-    font-size: 1.05rem !important;
+    font-size: 1rem !important;
     color: var(--accent-primary) !important;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-family: 'Inter', sans-serif !important;
+    gap: 0.4rem;
     font-weight: 600 !important;
 }
 
 .module-card {
-    padding: 1.8rem 2rem;
-    margin-bottom: 1.2rem;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .module-card h3 {
     margin-top: 0;
-    font-size: 1.2rem;
-    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
 }
 
 .module-card .module-tagline {
     color: var(--text-secondary);
-    font-size: 0.88rem;
-    margin-top: -0.2rem;
+    font-size: 0.85rem;
+    margin-top: -0.15rem;
 }
 
 /* ================================================================
@@ -1918,11 +1899,11 @@ p, span, label, .stMarkdown {
    ================================================================ */
 .badge {
     display: inline-block;
-    padding: 0.25rem 0.75rem;
+    padding: 0.2rem 0.6rem;
     border-radius: var(--radius-full);
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 600;
-    margin-right: 0.3rem;
+    margin-right: 0.25rem;
     letter-spacing: 0.02em;
     border: 1px solid transparent;
 }
@@ -1961,30 +1942,30 @@ p, span, label, .stMarkdown {
    HISTORY LIST
    ================================================================ */
 .history-item {
-    padding: 1.2rem 1.4rem;
-    margin-bottom: 0.8rem;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.6rem;
 }
 
 /* ================================================================
-   BUTTONS
+   BUTTONS - Modern Professional
    ================================================================ */
 div.stButton > button, .stDownloadButton > button {
     background: var(--accent-gradient) !important;
-    color: #000 !important;
+    color: #fff !important;
     border: none !important;
     border-radius: var(--radius-sm) !important;
     font-weight: 600 !important;
-    padding: 0.7rem 1.5rem !important;
+    padding: 0.6rem 1.25rem !important;
     transition: all var(--transition-fast) !important;
-    box-shadow: var(--shadow-gold) !important;
+    box-shadow: var(--shadow-accent) !important;
     letter-spacing: -0.01em;
-    font-size: 0.9rem !important;
+    font-size: 0.85rem !important;
 }
 
 div.stButton > button:hover, .stDownloadButton > button:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 24px rgba(212, 175, 55, 0.25) !important;
-    color: #000 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.25) !important;
+    color: #fff !important;
 }
 
 div.stButton > button:active {
@@ -2016,10 +1997,10 @@ section[data-testid="stSidebar"] div.stButton > button:hover {
 }
 
 /* ================================================================
-   TABS
+   TABS - Clean Modern
    ================================================================ */
 .stTabs [data-baseweb="tab-list"] {
-    gap: 4px;
+    gap: 2px;
     border-bottom: 1px solid var(--border-primary);
 }
 
@@ -2027,8 +2008,9 @@ section[data-testid="stSidebar"] div.stButton > button:hover {
     color: var(--text-secondary);
     font-weight: 500;
     border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-    padding: 0.8rem 1.2rem;
+    padding: 0.6rem 1rem;
     transition: all var(--transition-fast);
+    font-size: 0.85rem;
 }
 
 .stTabs [aria-selected="true"] {
@@ -2043,7 +2025,7 @@ section[data-testid="stSidebar"] div.stButton > button:hover {
     background: var(--bg-card);
     border: 1px solid var(--border-primary);
     border-radius: var(--radius-md);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
 }
 
 /* ================================================================
@@ -2070,14 +2052,14 @@ input:focus, textarea:focus {
 }
 
 .score-row {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .score-row .score-top {
     display: flex;
     justify-content: space-between;
-    font-size: 0.85rem;
-    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
 }
 
 .score-row .score-top .score-label {
@@ -2088,11 +2070,10 @@ input:focus, textarea:focus {
 .score-row .score-top .score-value {
     color: var(--accent-primary);
     font-weight: 700;
-    font-family: 'Playfair Display', serif;
 }
 
 .score-track {
-    height: 6px;
+    height: 5px;
     border-radius: var(--radius-full);
     background: var(--bg-tertiary);
     overflow: hidden;
@@ -2110,13 +2091,13 @@ input:focus, textarea:focus {
 }
 
 /* ================================================================
-   TABLES
+   TABLES - Clean Modern
    ================================================================ */
 .modern-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.88rem;
-    margin: 0.5rem 0 1rem 0;
+    font-size: 0.85rem;
+    margin: 0.4rem 0 0.75rem 0;
 }
 
 .modern-table th {
@@ -2124,14 +2105,14 @@ input:focus, textarea:focus {
     color: var(--text-tertiary);
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-    padding: 0.8rem 1rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    padding: 0.6rem 0.75rem;
     border-bottom: 1px solid var(--border-primary);
 }
 
 .modern-table td {
-    padding: 0.9rem 1rem;
+    padding: 0.65rem 0.75rem;
     border-bottom: 1px solid var(--border-secondary);
     color: var(--text-primary);
     vertical-align: top;
@@ -2148,16 +2129,16 @@ input:focus, textarea:focus {
     background: var(--bg-card);
     border: 1px solid var(--border-primary);
     border-radius: var(--radius-md);
-    padding: 1rem;
-    min-height: 140px;
+    padding: 0.75rem;
+    min-height: 120px;
 }
 
 .kanban-col h5 {
     color: var(--text-secondary);
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin: 0 0 0.8rem 0;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.6rem 0;
     font-weight: 600;
 }
 
@@ -2165,9 +2146,9 @@ input:focus, textarea:focus {
     background: var(--bg-tertiary);
     border: 1px solid var(--border-secondary);
     border-radius: var(--radius-sm);
-    padding: 0.7rem 0.9rem;
-    font-size: 0.84rem;
-    margin-bottom: 0.6rem;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.82rem;
+    margin-bottom: 0.5rem;
     transition: all var(--transition-fast);
 }
 
@@ -2181,33 +2162,33 @@ input:focus, textarea:focus {
    ================================================================ */
 .timeline-item {
     border-left: 2px solid var(--accent-primary);
-    padding-left: 1.2rem;
-    margin-bottom: 1.2rem;
+    padding-left: 1rem;
+    margin-bottom: 0.85rem;
     position: relative;
 }
 
 .timeline-item::before {
     content: "";
     position: absolute;
-    left: -6px;
+    left: -5px;
     top: 4px;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: var(--accent-gradient);
-    box-shadow: 0 0 0 4px var(--bg-deep);
+    box-shadow: 0 0 0 3px var(--bg-deep);
 }
 
 .timeline-item .t-title {
     font-weight: 600;
     color: var(--text-primary);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .timeline-item .t-meta {
     color: var(--text-tertiary);
-    font-size: 0.8rem;
-    margin-top: 0.2rem;
+    font-size: 0.78rem;
+    margin-top: 0.15rem;
 }
 
 /* ================================================================
@@ -2230,20 +2211,20 @@ input:focus, textarea:focus {
 }
 
 /* ================================================================
-   SCROLLBAR
+   SCROLLBAR - Minimal
    ================================================================ */
 ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(212, 175, 55, 0.3);
+    background: rgba(59, 130, 246, 0.3);
     border-radius: var(--radius-full);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(212, 175, 55, 0.5);
+    background: rgba(59, 130, 246, 0.5);
 }
 
 ::-webkit-scrollbar-track {
@@ -2437,28 +2418,22 @@ input::placeholder, textarea::placeholder {
 }
 
 /* ================================================================
-   PREMIUM HERO SECTION
+   MODERN HERO SECTION
    ================================================================ */
 .premium-hero {
     position: relative;
     overflow: hidden;
-    padding: 3rem 2.5rem;
+    padding: 1.5rem 1.5rem;
 }
 
 .hero-glow {
     position: absolute;
     top: -50%;
     right: -20%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
-    filter: blur(60px);
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-20px, 20px) scale(1.1); }
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+    filter: blur(40px);
 }
 
 .hero-content {
@@ -2467,21 +2442,19 @@ input::placeholder, textarea::placeholder {
 }
 
 .hero-title {
-    font-size: 2.5rem !important;
+    font-size: 1.75rem !important;
     font-weight: 700 !important;
-    margin: 0 0 0.5rem 0 !important;
-    background: linear-gradient(135deg, #fff 0%, #d4af37 100%);
+    margin: 0 0 0.4rem 0 !important;
+    background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: fadeInUp 0.8s ease;
 }
 
 .hero-subtitle {
-    font-size: 1.1rem !important;
+    font-size: 0.95rem !important;
     color: var(--text-secondary) !important;
     margin: 0 !important;
-    animation: fadeInUp 0.8s ease 0.2s backwards;
 }
 
 .hero-decoration {
@@ -2498,42 +2471,28 @@ input::placeholder, textarea::placeholder {
     position: absolute;
     border-radius: 50%;
     background: var(--accent-gradient);
-    opacity: 0.1;
+    opacity: 0.08;
 }
 
 .deco-1 {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     top: 10%;
     right: 10%;
-    animation: float 4s ease-in-out infinite;
 }
 
 .deco-2 {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     bottom: 20%;
     right: 20%;
-    animation: float 5s ease-in-out infinite 1s;
 }
 
 .deco-3 {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     top: 40%;
     right: 5%;
-    animation: float 6s ease-in-out infinite 2s;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* ================================================================
@@ -2551,8 +2510,8 @@ input::placeholder, textarea::placeholder {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
-    transition: left 0.6s ease;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.08), transparent);
+    transition: left 0.5s ease;
 }
 
 .metric-card:hover::after {
@@ -2565,12 +2524,12 @@ input::placeholder, textarea::placeholder {
 }
 
 /* ================================================================
-   PREMIUM BUTTONS
+   MODERN BUTTONS
    ================================================================ */
 .stButton > button, button[kind="primary"] {
     position: relative;
     overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s ease;
 }
 
 .stButton > button::before,
@@ -2582,15 +2541,15 @@ button[kind="primary"]::before {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.15);
     transform: translate(-50%, -50%);
-    transition: width 0.6s ease, height 0.6s ease;
+    transition: width 0.4s ease, height 0.4s ease;
 }
 
 .stButton > button:hover::before,
 button[kind="primary"]:hover::before {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 
 /* ================================================================
@@ -2614,9 +2573,9 @@ button[kind="primary"]:hover::before {
 .metric-card,
 .content-card,
 .module-card {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.25s ease;
 }
 
 .metric-card.visible,
@@ -3974,19 +3933,44 @@ def render_roadmap_content(roadmap):
         if not phases:
             st.caption("Not specified in the uploaded SRS.")
         for idx, p in enumerate(phases, 1):
+            phase_name = p.get("phase_name", f"Phase {idx}")
+            tasks = p.get("tasks", []) or ["—"]
+            duration = p.get("duration", "—")
+            owner = p.get("owner", "—")
+            dependencies = p.get("dependencies", "—")
+            expected_output = p.get("expected_output", "—")
+            
+            # Create structured phase card
             st.markdown(
-                f'<div class="content-card"><h4>🔹 {p.get("phase_name", f"Phase {idx}")}</h4>',
+                f'''<div class="content-card">
+                    <h4>🔹 {phase_name}</h4>
+                    <div style="margin: 0.5rem 0;">
+                        <strong style="color: var(--text-secondary); font-size: 0.8rem;">Tasks:</strong>
+                        <ul style="margin: 0.3rem 0 0.5rem 1.2rem; padding: 0; color: var(--text-primary);">
+                            {"".join(f"<li style='margin-bottom: 0.2rem;'>{t}</li>" for t in tasks)}
+                        </ul>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; padding: 0.5rem 0; border-top: 1px solid var(--border-secondary);">
+                        <div>
+                            <div style="font-size: 0.65rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">Duration</div>
+                            <div style="font-size: 0.85rem; font-weight: 500; color: var(--text-primary);">{duration}</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.65rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">Owner</div>
+                            <div style="font-size: 0.85rem; font-weight: 500; color: var(--text-primary);">{owner}</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.65rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">Dependencies</div>
+                            <div style="font-size: 0.85rem; font-weight: 500; color: var(--text-primary);">{dependencies}</div>
+                        </div>
+                    </div>
+                    <div style="padding-top: 0.5rem; border-top: 1px solid var(--border-secondary); margin-top: 0.5rem;">
+                        <span style="font-size: 0.75rem; color: var(--text-tertiary);">Expected Output: </span>
+                        <span style="font-size: 0.85rem; color: var(--text-primary); font-weight: 500;">{expected_output}</span>
+                    </div>
+                </div>''',
                 unsafe_allow_html=True,
             )
-            st.markdown("**Tasks:**")
-            for t in p.get("tasks", []) or ["—"]:
-                st.markdown(f"- {t}")
-            c1, c2, c3 = st.columns(3)
-            c1.markdown(f"**Duration**<br>{p.get('duration', '—')}", unsafe_allow_html=True)
-            c2.markdown(f"**Owner**<br>{p.get('owner', '—')}", unsafe_allow_html=True)
-            c3.markdown(f"**Dependencies**<br>{p.get('dependencies', '—')}", unsafe_allow_html=True)
-            st.markdown(f"**Expected Output:** {p.get('expected_output', '—')}")
-            st.markdown("</div>", unsafe_allow_html=True)
 
     with sub_daily:
         daily = roadmap.get("daily_plan", [])
